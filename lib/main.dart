@@ -48,7 +48,7 @@ class _MyAppState extends State<MyApp> {
                         child: Padding(
                           padding: EdgeInsets.symmetric(
                               horizontal: 12.0, vertical: 4.0),
-                          child: Text("Updated",
+                          child: Text("Not updated",
                               style: TextStyle(color: Colors.white)),
                         ),
                       ),
