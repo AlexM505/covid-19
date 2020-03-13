@@ -22,7 +22,7 @@ class _MainCarouselState extends State<MainCarousel> {
               if(snapshot.hasData){
                 return CarouselSlider(
                     autoPlay: true,
-                    height: 200.0,
+                    height: 220.0,
                     items: snapshot.data.map((i){
                       return Builder(
                         builder: (BuildContext context){
