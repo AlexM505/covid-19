@@ -2,6 +2,10 @@ import 'package:coronaviruscovid19/component/main_carousel.dart';
 import 'package:flutter/material.dart';
 import 'package:coronaviruscovid19/component/bottom_navy_bar.dart';
 import 'package:coronaviruscovid19/model/Review.dart';
+import '../widgets/section_category.dart';
+import '../widgets/home_top_info.dart';
+import '../widgets/pie_chart_corona.dart';
+import '../widgets/incubation_period.dart';
 import 'dart:math';
 
 
@@ -44,30 +48,8 @@ class _HomePageState extends State<HomePage> {
       body: SingleChildScrollView(
         child: Column(
           children: <Widget>[
-            Padding(
-              padding: EdgeInsets.only(left: 20.0,top: 36.0),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: <Widget>[
-                  Text("Tittle",
-                    style: TextStyle(
-                        color: Color(0xff413F73),
-                        fontFamily: "Calibre-Semibold",
-                        fontSize: 40.0,
-                        letterSpacing: 0.5
-                    ),
-                  ),
-                  IconButton(
-                    icon: Icon(
-                      Icons.settings,
-                      color: Color(0xff413F73),
-                      size: 32.0,
-                    ),
-                    onPressed: () {},
-                  )
-                ],
-              ),
-            ),
+            HomeTopInfo(),
+            IncubationPeriod(),
             Stack(
               children: <Widget>[
                MainCarousel(),
@@ -84,7 +66,7 @@ class _HomePageState extends State<HomePage> {
               ],
             ),
             Padding(
-              padding: EdgeInsets.only(left: 20.0,top: 8.0),
+              padding: EdgeInsets.only(left: 20.0,top: 16.0),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: <Widget>[
@@ -92,99 +74,15 @@ class _HomePageState extends State<HomePage> {
                     style: TextStyle(
                         color: Color(0xff413F73),
                         fontFamily: "Calibre-Semibold",
-                        fontSize: 36.0,
+                        fontSize: 30.0,
                         letterSpacing: -1
                     ),
                   ),
                 ],
               ),
             ),
-            Padding(
-              padding: EdgeInsets.only(left: 20.0),
-              child: Row(
-                children: <Widget>[
-                  Padding(
-                    padding: EdgeInsets.only(right: 8.0),
-                    child: ActionChip(
-                        backgroundColor: Colors.green.shade300,
-                        label: Text('Symptoms',
-                            style: TextStyle(
-                                fontSize: 16.0,
-                                color: Colors.white
-                            )
-                        ),
-                        onPressed: () {
-                          print("Pressed Symptoms ActionChip");
-                        }
-                    ),
-                  ),
-                  Padding(
-                    padding: EdgeInsets.only(right:8.0),
-                    child: ActionChip(
-                        backgroundColor: Colors.blue.shade300,
-                        label: Text('Prevention',
-                            style: TextStyle(
-                                fontSize: 16.0,
-                                color: Colors.white
-                            )
-                        ),
-                        onPressed: () {
-                          print("Pressed Prevention ActionChip");
-                        }
-                    ),
-                  ),
-                  ActionChip(
-                      backgroundColor: Colors.orange.shade300,
-                      label: Text('Origin',
-                          style: TextStyle(
-                              fontSize: 16.0,
-                              color: Colors.white
-                          )
-                      ),
-                      onPressed: () {
-                        print("Pressed Origin ActionChip");
-                      }
-                  )
-                ],
-              ),
-            ),
-            Padding(
-              padding: EdgeInsets.only(left: 20.0,bottom: 20.0),
-              child: Row(
-                children: <Widget>[
-                  Padding(
-                    padding: EdgeInsets.only(right: 8.0),
-                    child: ActionChip(
-                        backgroundColor: Colors.deepPurple.shade300,
-                        label: Text('Evolution of the disease',
-                            style: TextStyle(
-                                fontSize: 16.0,
-                                color: Colors.white
-                            )
-                        ),
-                        onPressed: () {
-                          print("Pressed Evolution ActionChip");
-                        }
-                    ),
-                  ),
-                  Padding(
-                    padding: EdgeInsets.only(right:8.0),
-                    child: ActionChip(
-                        backgroundColor: Colors.red.shade300,
-                        label: Text('Affected areas',
-                            style: TextStyle(
-                                fontSize: 16.0,
-                                color: Colors.white
-                            )
-                        ),
-                        onPressed: () {
-                          print("Pressed Affected ActionChip");
-                        }
-                    ),
-                  ),
-                ],
-              ),
-            ),
+            SectionCategory(),
+            PieChartCorona()
           ],
         ),
       ),
