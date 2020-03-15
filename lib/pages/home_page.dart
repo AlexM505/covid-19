@@ -178,7 +178,7 @@ class _HomePageState extends State<HomePage> {
                             )
                         ),
                         onPressed: () {
-                          print("Pressed Affected ActionChip");
+                          Navigator.pushNamed(context, 'map');
                         }
                     ),
                   ),
