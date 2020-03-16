@@ -31,31 +31,13 @@ class _HomePageState extends State<HomePage> {
       body: SingleChildScrollView(
         child: Column(
           children: <Widget>[
-//            HomeTopInfo(),
             IncubationPeriod(),
             Stack(
               children: <Widget>[
                MainCarousel(),
               ],
             ),
-            // Padding(
-            //   padding: EdgeInsets.only(left: 20.0,top: 16.0),
-            //   child: Row(
-            //     mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            //     children: <Widget>[
-            //       Text("Sections",
-            //         style: TextStyle(
-            //             color: Colors.black87,
-            //             fontFamily: "Calibre-Semibold",
-            //             fontSize: 24.0,
-            //             letterSpacing: -1
-            //         ),
-            //       ),
-            //     ],
-            //   ),
-            // ),
-            // SectionCategory(),
-            // PieChartCorona()
+           
           ],
         ),
       ),

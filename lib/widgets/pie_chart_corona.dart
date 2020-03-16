@@ -24,7 +24,7 @@ class PieChartState extends State{
         color: white,
         elevation: 2.0,
         shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(20.0),
+          borderRadius: BorderRadius.circular(10.0),
         ),
         child: Row(
           children: <Widget>[

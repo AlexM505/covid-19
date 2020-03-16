@@ -45,11 +45,11 @@ Future<List<CarouselImage>> getchImages() async{
 
   //--- create objects for carousel testing with real images
   List<CarouselImage> items = new List<CarouselImage>();
-  CarouselImage item = new CarouselImage.create(1, 'https://i.insider.com/5e34f48e5bc79c2abb3a7be4?width=1100&format=jpeg&auto=webp','Cases','102,300');
+  CarouselImage item = new CarouselImage.create(1, 'https://i.insider.com/5e34f48e5bc79c2abb3a7be4?width=1100&format=jpeg&auto=webp','Cases','179,558');
   items.add(item);
-  CarouselImage item2 = new CarouselImage.create(2, 'https://cdn.vox-cdn.com/thumbor/Xlai7Wo3G3ezFdTpyJnPIxnTgic=/0x0:6048x4024/1200x800/filters:focal(2671x1735:3637x2701)/cdn.vox-cdn.com/uploads/chorus_image/image/66313484/GettyImages_1196292480.0.jpg','DEATHS','30,108');
+  CarouselImage item2 = new CarouselImage.create(2, 'https://cdn.vox-cdn.com/thumbor/Xlai7Wo3G3ezFdTpyJnPIxnTgic=/0x0:6048x4024/1200x800/filters:focal(2671x1735:3637x2701)/cdn.vox-cdn.com/uploads/chorus_image/image/66313484/GettyImages_1196292480.0.jpg','DEATHS','7,067');
   items.add(item2);
-  CarouselImage item3 = new CarouselImage.create(3, 'https://i.dailymail.co.uk/1s/2020/03/02/23/25451918-8066545-More_people_in_China_have_recovered_from_coronavirus_than_are_cu-a-11_1583190863935.jpg','RECOVERED','80,000');
+  CarouselImage item3 = new CarouselImage.create(3, 'https://i.dailymail.co.uk/1s/2020/03/02/23/25451918-8066545-More_people_in_China_have_recovered_from_coronavirus_than_are_cu-a-11_1583190863935.jpg','RECOVERED','78,286');
   items.add(item3);
   return items;
 

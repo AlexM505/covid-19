@@ -5,6 +5,7 @@ class IncubationPeriod extends StatelessWidget{
   Widget build(BuildContext context) {
 
     return Container(
+      margin: EdgeInsets.only(top:8.0,bottom:8.0),
       child: Column(
         children: <Widget>[
           InkWell(

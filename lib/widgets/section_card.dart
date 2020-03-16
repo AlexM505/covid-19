@@ -13,7 +13,7 @@ class SectionCard extends StatelessWidget{
       margin: EdgeInsets.only(right:6.0),
       child: Card(
           shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(12.0),
+            borderRadius: BorderRadius.circular(10.0),
           ),
           elevation: 2.0,
           child: Padding(
