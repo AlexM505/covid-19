@@ -1,3 +1,5 @@
+import 'dart:ffi';
+
 import 'package:coronaviruscovid19/component/main_carousel.dart';
 import 'package:flutter/material.dart';
 import 'package:coronaviruscovid19/component/bottom_navy_bar.dart';
@@ -63,7 +65,7 @@ class _HomePageState extends State<HomePage> {
                       color: Color(0xff413F73),
                       size: 32.0,
                     ),
-                    onPressed: () {},
+                    onPressed: () {Navigator.pushNamed(context, 'config');},
                   )
                 ],
               ),
@@ -193,9 +195,13 @@ class _HomePageState extends State<HomePage> {
         showElevation: true,
         itemCornerRadius: 8,
         curve: Curves.easeInBack,
-        onItemSelected: (index) => setState(() {
+        onItemSelected: (index) {setState(() {
           currentIndex = index;
-        }),
+        });
+          if (index == 3){
+            Navigator.pushNamed(context, 'config');
+          }
+        },
         items: [
           BottomNavyBarItem(
             icon: Icon(Icons.apps),
@@ -221,7 +227,7 @@ class _HomePageState extends State<HomePage> {
             icon: Icon(Icons.settings),
             title: Text('Settings'),
             activeColor: Colors.blue,
-            textAlign: TextAlign.center,
+            textAlign: TextAlign.center,          
           ),
         ],
       ),
