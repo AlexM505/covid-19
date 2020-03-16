@@ -19,7 +19,7 @@ class PieChartState extends State{
   Widget build(BuildContext context) {
 
     return AspectRatio(
-      aspectRatio: 1.3,
+      aspectRatio: 1.6,
       child: Card(
         color: white,
         elevation: 2.0,
@@ -29,7 +29,7 @@ class PieChartState extends State{
         child: Row(
           children: <Widget>[
             const SizedBox(
-              height: 12,
+              height: 10,
             ),
             Expanded(
               child: AspectRatio(
@@ -108,7 +108,7 @@ class PieChartState extends State{
           return PieChartSectionData(
             color: blue,
             value: 63,
-            title: '129,854',
+            title: '182,197',
             radius: radius,
             titleStyle: TextStyle(
                 fontSize: fontSize, fontWeight: FontWeight.bold, color: white),
@@ -117,7 +117,7 @@ class PieChartState extends State{
           return PieChartSectionData(
             color: green,
             value: 26,
-            title: '68,672',
+            title: '78,340',
             radius: radius,
             titleStyle: TextStyle(
                 fontSize: fontSize, fontWeight: FontWeight.bold, color: white),
@@ -126,7 +126,7 @@ class PieChartState extends State{
           return PieChartSectionData(
             color: red,
             value: 11,
-            title: '4,751',
+            title: '7,139',
             radius: radius,
             titleStyle: TextStyle(
                 fontSize: fontSize, fontWeight: FontWeight.bold, color: white),

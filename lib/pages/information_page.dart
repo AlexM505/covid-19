@@ -19,8 +19,8 @@ class _InformationPageState extends State<InformationPage>{
         body: SingleChildScrollView(
           child: Column(
             children: <Widget>[
+              PieChartCorona(),
               SectionCategory(),
-              PieChartCorona()
             ]
           )
         )

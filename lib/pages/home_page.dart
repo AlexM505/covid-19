@@ -1,8 +1,6 @@
 import 'package:coronaviruscovid19/component/main_carousel.dart';
 import 'package:flutter/material.dart';
-import 'package:coronaviruscovid19/model/Review.dart';
-import '../widgets/section_category.dart';
-import '../widgets/pie_chart_corona.dart';
+import '../widgets/howspreads.dart';
 import '../widgets/incubation_period.dart';
 
 class HomePage extends StatefulWidget {
@@ -26,7 +24,20 @@ class _HomePageState extends State<HomePage> {
         brightness: Brightness.light,
         iconTheme: IconThemeData(color: Colors.black),
         backgroundColor: Colors.white,
-        title: Text("Covid-19", style: TextStyle(color: Colors.black87,),),
+        title: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                  Image.asset(
+                 'assets/images/virus.png',
+                  fit: BoxFit.contain,
+                  height: 32,
+              ),
+              Container(
+                  padding: const EdgeInsets.all(8.0), 
+                  child: Text("Covid-19", style: TextStyle(color: Colors.black87,),)
+                  )
+            ],
+        )
       ),
       body: SingleChildScrollView(
         child: Column(
@@ -37,7 +48,7 @@ class _HomePageState extends State<HomePage> {
                MainCarousel(),
               ],
             ),
-           
+            HowSpreads(),
           ],
         ),
       ),

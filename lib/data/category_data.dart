@@ -11,7 +11,7 @@ final categories = [
   ),
   Category(
       categoryName: "Origin",
-      imagePath: "assets/images/origin.png"
+      imagePath: "assets/images/bat_carrier.png"
   ),
   Category(
       categoryName: "Evolution of \nthe disease",
