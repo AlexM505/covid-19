@@ -18,16 +18,21 @@ class ConfigurationPages extends StatelessWidget {
             children: <Widget>[
               Card(
                 shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10.0)),
-                color: Colors.blueAccent,
+                color: Colors.yellow,
                 margin: const EdgeInsets.all(7.0),
                 child: ListTile(
                   onTap: (){
                     //abrir editar para editar perfil
                   },
+<<<<<<< Updated upstream:lib/pages/Configuration_app.dart
                   title: Text('Nombre', style: TextStyle(color: Colors.white, 
+=======
+                  title: Text('Join to premium!', style: TextStyle(color: Colors.white, 
+>>>>>>> Stashed changes:lib/pages/configuration_page.dart
                     fontWeight: FontWeight.w500 ),),
-                  trailing: Icon(Icons.edit, color: Colors.white,),
-                  leading: CircleAvatar(backgroundColor: Colors.black,),),//cambiar por imagen
+                  
+                  leading: Icon(Icons.stars, color: Colors.white,)
+                  ),//cambiar por imagen
                   
                 
               ),
@@ -68,14 +73,6 @@ class ConfigurationPages extends StatelessWidget {
                     trailing: Icon(Icons.keyboard_arrow_right),
                     onTap: (){
                       //abrir cambiar Idioma
-                    },
-                    ),
-                  ListTile(
-                    leading: Icon(Icons.monetization_on, color: Colors.yellowAccent,),
-                    title: Text('Premium'),
-                    trailing: Icon(Icons.keyboard_arrow_right),
-                    onTap: (){
-                      //abrir cambiar virus
                     },
                     ),
                   ],),         
