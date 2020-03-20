@@ -1,45 +1,29 @@
+import 'package:coronaviruscovid19/pages/home_page.dart';
+import 'package:coronaviruscovid19/pages/map_view.dart';
 import 'package:flutter/material.dart';
+import 'package:coronaviruscovid19/pages/Configuration_app.dart';
 
-void main() => runApp(MyApp());
+void main() => runApp(MaterialApp(
+      // home: MyApp(),
+      debugShowCheckedModeBanner: false,
+      initialRoute: '/',
+      routes: {
+        '/': (BuildContext context) => MyApp(),
+        'map': (BuildContext context) => MapView(),
+        'config': (BuildContext context) => ConfigurationPages()
+      },
+    ));
 
-class MyApp extends StatelessWidget {
-
+class MyApp extends StatefulWidget {
   @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
-      home: MyHomePage(title: 'Covid 19'),
-    );
-  }
+  _MyAppState createState() => new _MyAppState();
 }
 
-class MyHomePage extends StatefulWidget {
-  MyHomePage({Key key, this.title}) : super(key: key);
-  final String title;
-  @override
-  _MyHomePageState createState() => _MyHomePageState();
-}
-
-class _MyHomePageState extends State<MyHomePage> {
+class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text(widget.title),
-      ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            Text(
-              'esto solo es un texto',
-            ),
-          ],
-        ),
-      ),
+    return Container(
+      child: Scaffold(backgroundColor: Colors.white, body: HomePage()),
     );
   }
 }
