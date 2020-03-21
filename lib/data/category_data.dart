@@ -1,4 +1,4 @@
-import '../model/category.dart';
+import 'package:coronaviruscovid19/model/Category.dart';
 
 final categories = [
   Category(

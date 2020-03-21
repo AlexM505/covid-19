@@ -1,6 +1,6 @@
+import 'package:coronaviruscovid19/model/Category.dart';
 import 'package:flutter/material.dart';
 import 'section_card.dart';
-import '../model/category.dart';
 import '../data/category_data.dart';
 
 class SectionCategory extends StatelessWidget{
