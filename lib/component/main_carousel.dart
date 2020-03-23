@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:coronaviruscovid19/model/Carousel_Image.dart';
 import 'package:carousel_slider/carousel_slider.dart';
-import 'package:http/http.dart' as http;
-import 'dart:convert';
 
 Future<List<CarouselImage>> banners;
 class MainCarousel extends StatefulWidget {
@@ -22,7 +20,7 @@ class _MainCarouselState extends State<MainCarousel> {
               if(snapshot.hasData){
                 return CarouselSlider(
                     autoPlay: true,
-                    height: 200.0,
+                    height: 220.0,
                     items: snapshot.data.map((i){
                       return Builder(
                         builder: (BuildContext context){
