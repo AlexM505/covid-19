@@ -1,19 +1,12 @@
+import 'package:coronaviruscovid19/model/Category.dart';
 import 'package:flutter/material.dart';
 
 class InfoView extends StatelessWidget {
-  InfoView(
-      {@required this.title,
-      @required this.content,
-      @required this.imgPath,
-      @required this.imgLocal});
-
-  final String title;
-  final String content;
-  final String imgPath;
-  final bool imgLocal;
 
   @override
   Widget build(BuildContext context) {
+    final Content_Category contentCategory = ModalRoute.of(context).settings.arguments;
+
     return Scaffold(
       body: SafeArea(
         child: Container(
@@ -22,9 +15,9 @@ class InfoView extends StatelessWidget {
             children: <Widget>[
               Align(
                 child: FadeInImage(
-                  image: this.imgLocal
-                      ? AssetImage(this.imgPath)
-                      : NetworkImage(this.imgPath),
+                  image: contentCategory.imgLocal
+                      ? AssetImage(contentCategory.imgPath)
+                      : NetworkImage(contentCategory.imgPath),
                   fit: BoxFit.cover,
                   placeholder: AssetImage('assets/images/no-image.jpg'),
                   width: 300.0,
@@ -36,7 +29,7 @@ class InfoView extends StatelessWidget {
                 height: 20.0,
               ),
               Text(
-                this.title,
+                contentCategory.title,
                 style: TextStyle(fontSize: 25.0, fontFamily: 'roboto'),
                 textAlign: TextAlign.center,
               ),
@@ -44,7 +37,7 @@ class InfoView extends StatelessWidget {
                 height: 10.0,
               ),
               Text(
-                this.content,
+                contentCategory.content,
                 textAlign: TextAlign.justify,
                 style: TextStyle(fontSize: 14.0),
               )

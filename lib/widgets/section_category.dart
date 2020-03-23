@@ -20,7 +20,8 @@ class SectionCategory extends StatelessWidget {
                 imagePath: _categories[index].imagePath),
             onTap: (){
               print('hola aqui');
-              Navigator.pushNamed(context, 'InfoView');
+              //Navigator.pushNamed(context, 'InfoView');
+              Navigator.pushNamed(context, 'InfoView',arguments: _categories[index].content);
             },
           );
         },
