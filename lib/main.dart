@@ -1,4 +1,5 @@
 
+import 'package:coronaviruscovid19/pages/InfoView.dart';
 import 'package:coronaviruscovid19/pages/home_page.dart';
 import 'pages/map_page.dart';
 import 'pages/configuration_page.dart';
@@ -14,7 +15,13 @@ void main() => runApp(MaterialApp(
         '/': (BuildContext context) => MyApp(),
         'info': (BuildContext context) => InformationPage(),
         'map': (BuildContext context) => MapPage(),
-        'config': (BuildContext context) => ConfigurationPage()
+        'config': (BuildContext context) => ConfigurationPage(),
+        'InfoView':  (BuildContext context) => InfoView(
+          title: 'hola bro',
+          content: 'me la pelas',
+          imgLocal: false,
+          imgPath: 'https://concepto.de/wp-content/uploads/2013/08/salud-OMS-e1551914081412.jpg',
+        )
       },
 ));
 
