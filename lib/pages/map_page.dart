@@ -12,8 +12,24 @@ class _MapPageState extends State<MapPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        elevation: 2,
+        brightness: Brightness.light,
+        iconTheme: IconThemeData(color: Colors.black),
         backgroundColor: Colors.white,
-        title: Text("Affected zones", style: TextStyle(color: Colors.black87),),
+        title: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                  Image.asset(
+                 'assets/images/virus.png',
+                  fit: BoxFit.contain,
+                  height: 32,
+              ),
+              Container(
+                  padding: const EdgeInsets.all(8.0), 
+                  child: Text("Covid-19", style: TextStyle(color: Colors.black87,),)
+                  )
+            ],
+        )
       ),
       body: FlutterMap(
         options: new MapOptions(

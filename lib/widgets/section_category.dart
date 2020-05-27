@@ -10,9 +10,9 @@ class SectionCategory extends StatelessWidget{
   @override
   Widget build(BuildContext context){
     return Container(
-      height: 110.0,
+      height: MediaQuery.of(context).size.height / 2.08,
       child: ListView.builder(
-        scrollDirection: Axis.horizontal,
+        scrollDirection: Axis.vertical,
         itemCount: _categories.length,
         itemBuilder: (BuildContext context, int index){
           return SectionCard(

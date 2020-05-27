@@ -36,7 +36,7 @@ class SectionCard extends StatelessWidget{
                         color: Colors.green.shade800,
                       ),
                     ),
-                    Text("See", style: TextStyle(fontSize: 12.0,color: Colors.blue.shade900))
+                    Text("See more", style: TextStyle(fontSize: 12.0,color: Colors.blue.shade900))
                   ],
                 )
               ],
