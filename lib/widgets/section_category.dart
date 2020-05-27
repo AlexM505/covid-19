@@ -1,3 +1,4 @@
+import 'package:coronaviruscovid19/component/main_app_bar.dart';
 import 'package:flutter/material.dart';
 import 'section_card.dart';
 import '../model/category.dart';
@@ -15,11 +16,40 @@ class SectionCategory extends StatelessWidget{
         scrollDirection: Axis.vertical,
         itemCount: _categories.length,
         itemBuilder: (BuildContext context, int index){
-          return SectionCard(
-              categoryName: _categories[index].categoryName,
-              imagePath: _categories[index].imagePath
+          return new GestureDetector(
+            child: SectionCard(
+                categoryName: _categories[index].categoryName,
+                imagePath: _categories[index].imagePath
+            ),
+            onTap: () {
+              onCardTapped(context, index);
+            }
           );
         },
+      ),
+    );
+  }
+
+  onCardTapped(BuildContext context, int position) {
+    Navigator.push(
+      context,
+      MaterialPageRoute(builder: (context) => SecondRoute()),
+    );
+  }
+}
+
+class SecondRoute extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: MainAppBar(),
+      body: Center(
+        child: RaisedButton(
+          onPressed: () {
+            Navigator.pop(context);
+          },
+          child: Text('Go back!'),
+        ),
       ),
     );
   }
